@@ -1,0 +1,8 @@
+torch
+torchvision
+transformers
+opencv-python
+pillow
+pyttsx3
+flask
+gunicorn

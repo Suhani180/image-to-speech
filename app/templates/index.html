@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image-to-Speech</title>
+    </head>
+    <body>
+    <h1>Image-to-Speech Converter</h1>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required />
+        <button type="submit">Upload and Convert</button>
+    </form>
+
+    {% if caption %}
+    <h2>Generated Caption:</h2>
+    <p>{{ caption }}</p>
+    <h2>Uploaded Image:</h2>
+    <img
+        src="/data/images/captions"
+        alt="Uploaded Image"
+        style="max-width: 300px"
+    />
+    {% endif %}
+    </body>
+</html>
